@@ -2,8 +2,8 @@
 /* Estilos Generales     */
 /* -------------------- */
 :root {
-    --color-primary: #1e3a8a; /* Azul oscuro */
-    --color-secondary: #fcd34d; /* Amarillo */
+    --color-primary: #000000; /* Negro */
+    --color-secondary: #EB4C1C; /* Anaranjado */
     --color-text: #333;
     --color-background: #f4f4f9;
     --color-card-bg: #fff;
