@@ -35,9 +35,14 @@ body {
     padding: 20px;
 }
 
-h1, h2 {
+h1{
     text-align: center;
     color: var(--color-text);
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-primary;
 }
 
 /* -------------------- */
