@@ -17,33 +17,63 @@
     </header>
 
     <main class="container">
-        <h2>PRODUCTOS</h2>
+        <h2>COMBO 02</h2>
         
         <section class="catalogo-grid">
             
-            <div class="producto-card">
-                <img src="images/Lona+Antivuelco.jpeg" alt="LonaAntivuelcoTUWA" class="producto-img">
-                <h3 class="producto-nombre">COMBO 01</h3>
-                <p class="producto-descripcion">LONA TUWA PRO + ANTIVUELCO TUWA PRO NEGRO</p>
-                <p class="producto-precio">$600</p>
-                <a href="combo01.html" class="btn-info">VER DETALLE</a>
-            </div>
+          <div class="carrusel-container">
+        <div class="carrusel-slides" id="carruselSlides">
+            <div class="slide"><img src="img/foto1.jpg" alt="Foto 1"></div>
+            <div class="slide"><img src="img/foto2.jpg" alt="Foto 2"></div>
+            <div class="slide"><img src="img/foto3.jpg" alt="Foto 3"></div>
+            <div class="slide"><img src="img/foto4.jpg" alt="Foto 4"></div>
+        </div>
 
-            <div class="producto-card">
-                 <img src="images/Lona+Antivuelco.jpeg" alt="LonaAntivuelcoTUWA" class="producto-img">
-                <h3 class="producto-nombre">COMBO 02</h3>
-                <p class="producto-descripcion">ANTIVUELCO + LONA + PESCANTE.</p>
-                <p class="producto-precio">$850</p>
-                <a href="#" class="btn-info">VER DETALLE</a>
-            </div>
+        <a class="prev" onclick="cambiarSlide(-1)">&#10094;</a>
+        <a class="next" onclick="cambiarSlide(1)">&#10095;</a>
+    </div>
 
-            <div class="producto-card">
-                <img src="images/Lona+Antivuelco.jpeg" alt="LonaAntivuelcoTUWA" class="producto-img">
-                <h3 class="producto-nombre">COMBO 03</h3>
-                <p class="producto-descripcion">TAPA RETRACTIL + JUEGO ALFOMBRA 3D.</p>
-                <p class="producto-precio">$18.50</p>
-                <a href="#" class="btn-info">VER DETALLE</a>
-            </div>
+    <div class="tabla-container">
+        <h2>Detalles de Productos/Elementos</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre del Artículo</th>
+                    <th>Descripción Breve</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Artículo A</td>
+                    <td>Primer elemento con características únicas.</td>
+                    <td>$ 19.99</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Artículo B</td>
+                    <td>Un producto versátil para cualquier necesidad.</td>
+                    <td>$ 45.50</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Artículo C</td>
+                    <td>El más vendido de la temporada.</td>
+                    <td>$ 9.75</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Artículo D</td>
+                    <td>Nueva adición a nuestra colección.</td>
+                    <td>$ 78.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 
             </section>
     </main>
