@@ -18,6 +18,16 @@ body {
     line-height: 1.6;
 }
 
+.logo {
+    /* Define el tamaño del logo */
+    height: 70px; /* Estatura fija, el ancho se ajustará proporcionalmente */
+    /* Opcionalmente, define el ancho y altura */
+    /* width: 150px;
+    height: auto; */
+    
+    margin-right: 20px; /* Espacio a la derecha del logo */
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -139,4 +149,5 @@ h1, h2 {
         /* En pantallas pequeñas, solo una columna */
         grid-template-columns: 1fr; 
     }
+    
 }
