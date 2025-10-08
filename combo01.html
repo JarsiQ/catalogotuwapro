@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Accesorios | Excel Automotriz Nicaragua</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+    <style>
+        /* -------------------------- */
+        /* Estilos CSS       */
+        /* -------------------------- */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+
+        /* Contenedor principal de la galería */
+        .galeria-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para la imagen principal */
+        #imagen-principal {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+            border-radius: 6px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contenedor de las miniaturas */
+        .miniaturas-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Espacio entre miniaturas */
+            flex-wrap: wrap;
+        }
+
+        /* Estilos para las imágenes miniatura */
+        .miniatura {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer; /* Indica que es clickeable */
+            border: 3px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .miniatura:hover {
+            border-color: #007bff; /* Resalta al pasar el ratón */
+        }
+
+        /* Estilo para la miniatura activa */
+        .miniatura.active {
+            border-color: #ff5722; /* Borde al ser la imagen principal actual */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galeria-container">
+        <h1>Mi Galería de Fotos</h1>
+        
+        <img id="imagen-principal" src="img/foto1.jpg" alt="Imagen principal de la galería">
+
+        <div class="miniaturas-container">
+            <img class="miniatura active" src="img/foto1.jpg" alt="Miniatura 1" data-full="img/foto1.jpg" onclick="cambiarImagen(this)">
+            <img class="miniatura" src="img/foto2.jpg" alt="Miniatura 2" data-full="img/foto2.jpg" onclick="cambiarImagen(this)">
+            <img class="miniatura" src="img/foto3.jpg" alt="Miniatura 3" data-full="img/foto3.jpg" onclick="cambiarImagen(this)">
+            <img class="miniatura" src="img/foto4.jpg" alt="Miniatura 4" data-full="img/foto4.jpg" onclick="cambiarImagen(this)">
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Función JavaScript para cambiar la imagen principal.
+         * @param {HTMLElement} miniatura - La miniatura clickeada.
+         */
+        function cambiarImagen(miniatura) {
+            // 1. Obtener la imagen principal y su nueva fuente.
+            const imagenPrincipal = document.getElementById('imagen-principal');
+            const nuevaFuente = miniatura.getAttribute('data-full'); // Obtenemos la ruta de la miniatura
+
+            // 2. Cambiar la fuente de la imagen principal.
+            imagenPrincipal.src = nuevaFuente;
+            imagenPrincipal.alt = miniatura.alt.replace("Miniatura", "Imagen Principal");
+
+            // 3. Manejar la clase 'active' para el borde de la miniatura.
+            
+            // a) Quitar la clase 'active' de todas las miniaturas
+            const miniaturas = document.querySelectorAll('.miniatura');
+            miniaturas.forEach(img => {
+                img.classList.remove('active');
+            });
+
+            // b) Añadir la clase 'active' a la miniatura clickeada
+            miniatura.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
